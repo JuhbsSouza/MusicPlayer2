@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="207" width="414" height="482"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="65" id="X4d-f2-clM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumTableViewCell" rowHeight="65" id="X4d-f2-clM" customClass="CustomTableViewCell" customModule="musicPlayer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X4d-f2-clM" id="s1a-fn-8Mx">
@@ -37,6 +37,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIG-mE-4nD">
                                                     <rect key="frame" x="373.5" y="21.5" width="20.5" height="22"/>
                                                     <state key="normal" image="heart" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="favoriteButtonTapped:" destination="X4d-f2-clM" eventType="touchUpInside" id="Ant-iS-vaY"/>
+                                                    </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="QmH-dJ-vuy">
                                                     <rect key="frame" x="75" y="11" width="95.5" height="43"/>
@@ -65,6 +68,11 @@
                                                 <constraint firstItem="aHr-nP-rZg" firstAttribute="leading" secondItem="s1a-fn-8Mx" secondAttribute="leading" constant="20" id="f86-6g-ZF9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumTitleLabel" destination="ORs-Fr-wQW" id="3RU-jI-wA2"/>
+                                            <outlet property="cellImage" destination="aHr-nP-rZg" id="iZP-su-Uju"/>
+                                            <outlet property="descriptionLabel" destination="asp-sN-k5P" id="Wbm-a7-56d"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
