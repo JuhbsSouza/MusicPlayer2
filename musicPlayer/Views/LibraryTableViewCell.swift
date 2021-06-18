@@ -1,5 +1,5 @@
 //
-//  CustomTableViewCell.swift
+//  LibraryTableViewCell.swift
 //  musicPlayer
 //
 //  Created by Julia Silveira de Souza on 18/06/21.
@@ -7,18 +7,18 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class LibraryTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var cellImage: UIImageView!
-    
+    @IBOutlet weak var imageCell: UIImageView!
+        
     @IBOutlet weak var albumTitleLabel: UILabel!
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+    @IBAction func DetailButtonTapped(_ sender: UIButton) {
     }
     
-    static let identifier = "AlbumTableViewCell"
+    static let identifier = "LibraryTableViewCell"
     
     override class func awakeFromNib() {
         super.awakeFromNib()
