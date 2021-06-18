@@ -45,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				9F55DB45267CA34100FB91C5 /* musicPlayer */,
-				9FE91D36267CA4B5006A939C /* Resources */,
 				9F55DB44267CA34100FB91C5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,14 +60,11 @@
 		9F55DB45267CA34100FB91C5 /* musicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				9F55DB46267CA34100FB91C5 /* AppDelegate.swift */,
-				9F55DB48267CA34100FB91C5 /* SceneDelegate.swift */,
-				9F55DB4A267CA34100FB91C5 /* ViewController.swift */,
-				9FE91D39267CB5AD006A939C /* CustomTableViewCell.swift */,
-				9F55DB4C267CA34100FB91C5 /* Main.storyboard */,
-				9F55DB4F267CA34300FB91C5 /* Assets.xcassets */,
-				9F55DB51267CA34300FB91C5 /* LaunchScreen.storyboard */,
-				9F55DB54267CA34300FB91C5 /* Info.plist */,
+				9FE91D3E267D081B006A939C /* AppDelegate */,
+				9FE91D3D267D07E7006A939C /* Controllers */,
+				9FE91D3B267D07D0006A939C /* Models */,
+				9FE91D36267CA4B5006A939C /* Resources */,
+				9FE91D3C267D07DB006A939C /* Views */,
 			);
 			path = musicPlayer;
 			sourceTree = "<group>";
@@ -76,9 +72,45 @@
 		9FE91D36267CA4B5006A939C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F55DB54267CA34300FB91C5 /* Info.plist */,
+				9F55DB4F267CA34300FB91C5 /* Assets.xcassets */,
 				9FE91D37267CA4F5006A939C /* data.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FE91D3B267D07D0006A939C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FE91D3C267D07DB006A939C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9FE91D39267CB5AD006A939C /* CustomTableViewCell.swift */,
+				9F55DB51267CA34300FB91C5 /* LaunchScreen.storyboard */,
+				9F55DB4C267CA34100FB91C5 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9FE91D3D267D07E7006A939C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F55DB4A267CA34100FB91C5 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9FE91D3E267D081B006A939C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9F55DB46267CA34100FB91C5 /* AppDelegate.swift */,
+				9F55DB48267CA34100FB91C5 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 876KXU24XS;
-				INFOPLIST_FILE = musicPlayer/Info.plist;
+				INFOPLIST_FILE = musicPlayer/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 876KXU24XS;
-				INFOPLIST_FILE = musicPlayer/Info.plist;
+				INFOPLIST_FILE = musicPlayer/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
