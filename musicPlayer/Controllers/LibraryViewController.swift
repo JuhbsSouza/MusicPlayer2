@@ -10,6 +10,8 @@ import UIKit
 class LibraryViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+
+    var musicService = try! MusicService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,22 +23,25 @@ class LibraryViewController: UIViewController {
 extension LibraryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return musicService.loadLibrary().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LibraryTableViewCell.identifier) as? LibraryTableViewCell
-        
         else {
             return UITableViewCell()
         }
+
+        let collections = musicService.loadLibrary()
+        cell.configure(item: collections[indexPath.row])
         return cell
     }
 }
 
 extension LibraryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         print("detail")
     }
 }
