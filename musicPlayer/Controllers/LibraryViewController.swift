@@ -42,6 +42,17 @@ extension LibraryViewController: UITableViewDataSource {
 extension LibraryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "CollectionDetailSegue", sender: nil)
         print("detail")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "CollectionDetailSegue" {
+            guard let viewController = segue.destination as? AlbumDetailViewController
+            else {
+                print(Error.self)
+                return
+            }
+        }
     }
 }
