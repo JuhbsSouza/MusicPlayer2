@@ -12,7 +12,9 @@ class LibraryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var musicService = try! MusicService()
-    
+    var collections: [MusicCollection] = []
+    var collectionSelected: MusicCollection?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -21,7 +23,7 @@ class LibraryViewController: UIViewController {
 }
 
 extension LibraryViewController: UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return musicService.loadLibrary().count
     }
@@ -33,8 +35,12 @@ extension LibraryViewController: UITableViewDataSource {
             return UITableViewCell()
         }
 
-        let collections = musicService.loadLibrary()
-        cell.configure(item: collections[indexPath.row])
+        collections = musicService.loadLibrary()
+        collectionSelected = collections[indexPath.row]
+
+        cell.imageCell.image = musicService.getCoverImage(forItemIded: collectionSelected!.id)
+        cell.configure(item: collectionSelected!)
+
         return cell
     }
 }
@@ -53,6 +59,7 @@ extension LibraryViewController: UITableViewDelegate {
                 print(Error.self)
                 return
             }
+            viewController.musicCollection = collectionSelected
         }
     }
 }
