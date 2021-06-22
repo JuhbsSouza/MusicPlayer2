@@ -25,8 +25,8 @@ class LibraryTableViewCell: UITableViewCell {
 
     public func configure(item: MusicCollection) {
         let image = musicService.getCoverImage(forItemIded: item.id)
-        let title = item.albumArtistDescription
-        let artist = item.albumDescription
+        let title = item.title
+        let artist = item.mainPerson
 
         imageCell.image = image
         albumTitleLabel.text = title

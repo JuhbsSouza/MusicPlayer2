@@ -14,6 +14,8 @@
 		9F55DB50267CA34300FB91C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F55DB4F267CA34300FB91C5 /* Assets.xcassets */; };
 		9F55DB53267CA34300FB91C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F55DB51267CA34300FB91C5 /* LaunchScreen.storyboard */; };
 		9F5CAFEB2681120500770F73 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5CAFEA2681120500770F73 /* AlbumDetailViewController.swift */; };
+		9F5CAFEF2681675E00770F73 /* AlbumDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5CAFEE2681675E00770F73 /* AlbumDetailViewCell.swift */; };
+		9F5CAFF1268172FC00770F73 /* PlayingMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5CAFF0268172FC00770F73 /* PlayingMusicViewController.swift */; };
 		9FE91D38267CA4F5006A939C /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FE91D37267CA4F5006A939C /* data.json */; };
 		9FE91D3A267CB5AD006A939C /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE91D39267CB5AD006A939C /* FavoritesTableViewCell.swift */; };
 		9FE91D40267D21C9006A939C /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE91D3F267D21C9006A939C /* LibraryTableViewCell.swift */; };
@@ -31,6 +33,8 @@
 		9F55DB52267CA34300FB91C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F55DB54267CA34300FB91C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F5CAFEA2681120500770F73 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
+		9F5CAFEE2681675E00770F73 /* AlbumDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewCell.swift; sourceTree = "<group>"; };
+		9F5CAFF0268172FC00770F73 /* PlayingMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingMusicViewController.swift; sourceTree = "<group>"; };
 		9FE91D37267CA4F5006A939C /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		9FE91D39267CB5AD006A939C /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		9FE91D3F267D21C9006A939C /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 				9F55DB51267CA34300FB91C5 /* LaunchScreen.storyboard */,
 				9F55DB4C267CA34100FB91C5 /* Main.storyboard */,
 				9FE91D3F267D21C9006A939C /* LibraryTableViewCell.swift */,
+				9F5CAFEE2681675E00770F73 /* AlbumDetailViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				9F55DB4A267CA34100FB91C5 /* FavoritesViewController.swift */,
 				9FE91D41267D2A2B006A939C /* LibraryViewController.swift */,
 				9F5CAFEA2681120500770F73 /* AlbumDetailViewController.swift */,
+				9F5CAFF0268172FC00770F73 /* PlayingMusicViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,10 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5CAFF1268172FC00770F73 /* PlayingMusicViewController.swift in Sources */,
 				9F55DB4B267CA34100FB91C5 /* FavoritesViewController.swift in Sources */,
 				9F55DB47267CA34100FB91C5 /* AppDelegate.swift in Sources */,
 				9FE91D40267D21C9006A939C /* LibraryTableViewCell.swift in Sources */,
 				9FE91D3A267CB5AD006A939C /* FavoritesTableViewCell.swift in Sources */,
+				9F5CAFEF2681675E00770F73 /* AlbumDetailViewCell.swift in Sources */,
 				9FE91D42267D2A2B006A939C /* LibraryViewController.swift in Sources */,
 				9F5CAFEB2681120500770F73 /* AlbumDetailViewController.swift in Sources */,
 				9FED43C02680FA1000ECD08B /* MusicService.swift in Sources */,
