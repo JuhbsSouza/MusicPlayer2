@@ -10,10 +10,10 @@ import UIKit
 class AlbumDetailViewCell: UITableViewCell {
     
     @IBOutlet weak var imageCell: UIImageView!
-    @IBOutlet weak var musicTitleLabel: UILabel!
+    @IBOutlet weak var albumTitleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
-    @IBAction func FavoriteButtonTapped(_ sender: UIButton) {
-    }
+    @IBOutlet weak var numberOfMusicsTitleLabel: UILabel!
+    @IBOutlet weak var releaseDateLabel: UILabel!
 
     var musicService = try! MusicService()
     
@@ -24,12 +24,16 @@ class AlbumDetailViewCell: UITableViewCell {
     }
 
     public func configure(item: MusicCollection) {
-        let AlbumImage = musicService.getCoverImage(forItemIded: item.id)
-        let AlbumTitle = item.title
+        let albumImage = musicService.getCoverImage(forItemIded: item.id)
+        let albumTitle = item.title
         let artist = item.mainPerson
+        let numberOfMusics = String(item.musics.count)
+        let releaseDate = item.referenceDate
 
-        imageCell.image = AlbumImage
-        musicTitleLabel.text = AlbumTitle
+        imageCell.image = albumImage
+        albumTitleLabel.text = albumTitle
         artistLabel.text = artist
+        numberOfMusicsTitleLabel.text = numberOfMusics
+        releaseDateLabel.text = "Okay"
     }
 }
