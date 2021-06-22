@@ -11,8 +11,7 @@ class AlbumDetailViewController: UIViewController {
             
     @IBOutlet weak var tableView: UITableView!
     
-    var musicService = try! MusicService()
-    
+    var musicCollection: MusicCollection?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +23,12 @@ class AlbumDetailViewController: UIViewController {
 extension AlbumDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (musicService.getCollection(id: <#String#>)?.musics.count)!
+        if let numberOfMusics = musicCollection?.musics.count {
+            let numberOfRows = numberOfMusics + 1
+            return numberOfRows
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,15 +37,14 @@ extension AlbumDetailViewController: UITableViewDataSource {
             else {
                 return UITableViewCell()
             }
-            
-            cell.configure(item: musicService.getCollection(id: MusicCollection))
-            
-        }else {
+            cell.configure(item: musicCollection!)
+            return cell
+        } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MusicTableViewCell.identifier) as? MusicTableViewCell
             else {
                 return UITableViewCell()
             }
-            
+            return UITableViewCell()
         }
     }
     

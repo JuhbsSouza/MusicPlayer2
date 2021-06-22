@@ -15,7 +15,8 @@ class LibraryTableViewCell: UITableViewCell {
     @IBAction func DetailButtonTapped(_ sender: UIButton) {
     }
 
-    var musicService = try! MusicService()
+//    Excluir
+//    var musicService = try! MusicService()
     
     static let identifier = "LibraryTableViewCell"
     
@@ -24,11 +25,13 @@ class LibraryTableViewCell: UITableViewCell {
     }
 
     public func configure(item: MusicCollection) {
-        let image = musicService.getCoverImage(forItemIded: item.id)
+//        Excluir
+//        let image = musicService.getCoverImage(forItemIded: item.id)
         let title = item.title
         let artist = item.mainPerson
 
-        imageCell.image = image
+//        Excluir
+//        imageCell.image = image
         albumTitleLabel.text = title
         descriptionLabel.text = artist
     }
