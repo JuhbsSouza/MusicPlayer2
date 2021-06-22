@@ -15,9 +15,6 @@ class LibraryTableViewCell: UITableViewCell {
     @IBAction func DetailButtonTapped(_ sender: UIButton) {
     }
 
-//    Excluir
-//    var musicService = try! MusicService()
-    
     static let identifier = "LibraryTableViewCell"
     
     override class func awakeFromNib() {
@@ -25,13 +22,9 @@ class LibraryTableViewCell: UITableViewCell {
     }
 
     public func configure(item: MusicCollection) {
-//        Excluir
-//        let image = musicService.getCoverImage(forItemIded: item.id)
         let title = item.title
         let artist = item.mainPerson
 
-//        Excluir
-//        imageCell.image = image
         albumTitleLabel.text = title
         descriptionLabel.text = artist
     }
