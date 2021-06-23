@@ -8,8 +8,10 @@
 import UIKit
 
 class FavoritesViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    var musicService = try! MusicService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,25 +22,38 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return musicService.favoriteMusics.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FavoritesTableViewCell.identifier) as? FavoritesTableViewCell
         
         else {
             return UITableViewCell()
             
         }
+        
+        let favorites = musicService.favoriteMusics
+        let favoriteMusicLine = favorites[indexPath.row]
+        cell.configure(item:favoriteMusicLine)
         return cell
-
+        
     }
 }
 
 extension FavoritesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("ok")
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "PlayingFromFavorites", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PlayingFromFavorites" {
+            guard let viewController = segue.destination as? PlayingMusicViewController
+            else {
+                return
+            }
+        }
     }
 }

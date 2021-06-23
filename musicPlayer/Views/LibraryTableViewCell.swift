@@ -12,7 +12,7 @@ class LibraryTableViewCell: UITableViewCell {
     @IBOutlet weak var imageCell: UIImageView!
     @IBOutlet weak var albumTitleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBAction func DetailButtonTapped(_ sender: UIButton) {
+    @IBAction func detailButtonTapped(_ sender: UIButton) {
     }
 
     static let identifier = "LibraryTableViewCell"
