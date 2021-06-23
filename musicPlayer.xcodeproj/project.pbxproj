@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F341038268257BC000AA9A4 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F341037268257BC000AA9A4 /* MusicTableViewCell.swift */; };
+		9F34103C26839D96000AA9A4 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34103B26839D96000AA9A4 /* MusicService.swift */; };
 		9F55DB47267CA34100FB91C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F55DB46267CA34100FB91C5 /* AppDelegate.swift */; };
 		9F55DB49267CA34100FB91C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F55DB48267CA34100FB91C5 /* SceneDelegate.swift */; };
 		9F55DB4B267CA34100FB91C5 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F55DB4A267CA34100FB91C5 /* FavoritesViewController.swift */; };
@@ -24,11 +25,11 @@
 		FA6EACA62683530A00EB70EF /* AlbumInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EACA52683530A00EB70EF /* AlbumInfoViewController.swift */; };
 		FA6EACA82683541800EB70EF /* AlbumInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EACA72683541800EB70EF /* AlbumInfoTableViewCell.swift */; };
 		FA6EACAA26837A4E00EB70EF /* AlbumArtistInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EACA926837A4E00EB70EF /* AlbumArtistInfoTableViewCell.swift */; };
-		FADCFA7026832F6200A1B8E2 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADCFA6F26832F6200A1B8E2 /* MusicService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F341037268257BC000AA9A4 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		9F34103B26839D96000AA9A4 /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicService.swift; path = "../../../../../Dropbox (DeveloperAcademy-BR)/Classes Content - 20:21/2021/Development/06-17 - UIKit Delegate + UITableView/Nano Resources/MusicService.swift"; sourceTree = "<group>"; };
 		9F55DB43267CA34100FB91C5 /* musicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F55DB46267CA34100FB91C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F55DB48267CA34100FB91C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		FA6EACA52683530A00EB70EF /* AlbumInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoViewController.swift; sourceTree = "<group>"; };
 		FA6EACA72683541800EB70EF /* AlbumInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoTableViewCell.swift; sourceTree = "<group>"; };
 		FA6EACA926837A4E00EB70EF /* AlbumArtistInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumArtistInfoTableViewCell.swift; sourceTree = "<group>"; };
-		FADCFA6F26832F6200A1B8E2 /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicService.swift; path = "../../../../../../Dropbox (DeveloperAcademy-BR)/Classes Content - 20:21/2021/Development/06-17 - UIKit Delegate + UITableView/Nano Resources/MusicService.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 		9FE91D3B267D07D0006A939C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FADCFA6F26832F6200A1B8E2 /* MusicService.swift */,
+				9F34103B26839D96000AA9A4 /* MusicService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,8 +218,8 @@
 				9F5CAFF1268172FC00770F73 /* PlayingMusicViewController.swift in Sources */,
 				9F55DB4B267CA34100FB91C5 /* FavoritesViewController.swift in Sources */,
 				9F55DB47267CA34100FB91C5 /* AppDelegate.swift in Sources */,
-				FADCFA7026832F6200A1B8E2 /* MusicService.swift in Sources */,
 				9FE91D40267D21C9006A939C /* LibraryTableViewCell.swift in Sources */,
+				9F34103C26839D96000AA9A4 /* MusicService.swift in Sources */,
 				9FE91D3A267CB5AD006A939C /* FavoritesTableViewCell.swift in Sources */,
 				FA6EACA82683541800EB70EF /* AlbumInfoTableViewCell.swift in Sources */,
 				9F5CAFEF2681675E00770F73 /* AlbumDetailViewCell.swift in Sources */,
