@@ -30,12 +30,11 @@ extension FavoritesViewController: UITableViewDataSource {
         
         else {
             return UITableViewCell()
-            
         }
         
         let favorites = musicService.favoriteMusics
         let favoriteMusicLine = favorites[indexPath.row]
-        cell.configure(item:favoriteMusicLine)
+        cell.configure(item: favoriteMusicLine)
         return cell
         
     }

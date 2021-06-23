@@ -48,8 +48,8 @@ extension LibraryViewController: UITableViewDataSource {
 extension LibraryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        collectionSelected = collections[indexPath.row]
         performSegue(withIdentifier: "CollectionDetailSegue", sender: nil)
-        print("detail")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
