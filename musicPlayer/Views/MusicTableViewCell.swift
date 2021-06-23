@@ -9,28 +9,23 @@ import UIKit
 
 class MusicTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var imageCell: UIImageView!
+    @IBOutlet weak var albumCoverImage: UIImageView!
     @IBOutlet weak var musicTitleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     @IBAction func favoriteButtonTapped(_ sender: UIButton) {
     }
-
-    var musicService = try! MusicService()
     
     static let identifier = "MusicTableViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
-    public func configure(item: MusicCollection) {
-        let albumImage = musicService.getCoverImage(forItemIded: item.id)
-        let albumTitle = item.title
-        let artist = item.mainPerson
+    public func configure(music: Music) {
+        let musicTitle = music.title
+        let artist = music.artist
 
-        imageCell.image = albumImage
-        musicTitleLabel.text = albumTitle
+        musicTitleLabel.text = musicTitle
         artistLabel.text = artist
     }
 

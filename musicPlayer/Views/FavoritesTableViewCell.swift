@@ -11,6 +11,7 @@ class FavoritesTableViewCell: UITableViewCell {
     
     var musicService = try! MusicService()
     var music: Music?
+
     @IBOutlet weak var albumImage: UIImageView!
     @IBOutlet weak var musicTitleLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
