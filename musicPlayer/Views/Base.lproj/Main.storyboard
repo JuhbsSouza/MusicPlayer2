@@ -193,7 +193,7 @@
         <scene sceneID="gSb-bS-CFH">
             <objects>
                 <viewController id="s0r-rj-0BP" customClass="PlayingMusicViewController" customModule="musicPlayer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="fwB-m0-3Ha">
+                    <view key="view" contentMode="scaleToFill" id="fwB-m0-3Ha" customClass="PlayingMusicView" customModule="musicPlayer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -214,6 +214,9 @@
                                     <imageReference key="image" image="heart" catalog="system" symbolScale="default"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="favoriteButton:" destination="fwB-m0-3Ha" eventType="touchUpInside" id="liF-mr-M3V"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-ry-o1s">
                                 <rect key="frame" x="39" y="600" width="336" height="92.5"/>
@@ -260,6 +263,9 @@
                                             <imageReference key="image" image="backward.end.fill" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backButton:" destination="fwB-m0-3Ha" eventType="touchUpInside" id="sRc-dJ-k5S"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVk-Fi-P0T">
                                         <rect key="frame" x="112" y="17" width="112" height="37"/>
@@ -269,6 +275,9 @@
                                             <imageReference key="image" image="playpause.fill" catalog="system" symbolScale="large"/>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                         </state>
+                                        <connections>
+                                            <action selector="playAndPauseButton:" destination="fwB-m0-3Ha" eventType="touchUpInside" id="fQh-ZI-ESe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpP-Fd-8Z8">
                                         <rect key="frame" x="224" y="17" width="112" height="37"/>
@@ -277,6 +286,9 @@
                                         <state key="normal" image="forward.end.fill" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                         </state>
+                                        <connections>
+                                            <action selector="fowardButton:" destination="fwB-m0-3Ha" eventType="touchUpInside" id="KT4-sK-AMw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -297,6 +309,12 @@
                             <constraint firstItem="Jjy-kN-ig7" firstAttribute="top" secondItem="8l7-cD-ksu" secondAttribute="top" constant="80" id="Wwz-je-RUT"/>
                             <constraint firstItem="AkR-ry-o1s" firstAttribute="top" secondItem="Jjy-kN-ig7" secondAttribute="bottom" constant="30" id="pWb-9X-AHq"/>
                         </constraints>
+                        <connections>
+                            <outlet property="albumImage" destination="Jjy-kN-ig7" id="fDZ-p0-ANE"/>
+                            <outlet property="artistNameLabel" destination="oXT-DS-ZWv" id="rcV-7X-EW6"/>
+                            <outlet property="musicNameLabel" destination="vti-CV-L19" id="LfC-Eq-e4u"/>
+                            <outlet property="musicProgressBar" destination="ELi-uz-181" id="0NE-HG-v5K"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Playing" id="fui-E9-j48"/>
                 </viewController>
