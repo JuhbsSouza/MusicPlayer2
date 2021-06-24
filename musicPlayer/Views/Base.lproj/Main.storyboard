@@ -86,7 +86,7 @@
                             <constraint firstItem="P7B-oq-jip" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d6i-cW-IvA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Favorites" id="tof-1K-4Zu"/>
+                    <navigationItem key="navigationItem" title="Favorites" largeTitleDisplayMode="always" id="tof-1K-4Zu"/>
                     <connections>
                         <outlet property="tableView" destination="P7B-oq-jip" id="yvz-db-dvk"/>
                         <segue destination="s0r-rj-0BP" kind="show" identifier="PlayingFromFavorites" id="1XK-rh-CTi"/>
@@ -179,7 +179,7 @@
                             <constraint firstItem="Z4V-iJ-5CF" firstAttribute="top" secondItem="qV4-9f-FKq" secondAttribute="top" id="x5c-wE-McY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Library" id="Hxm-AY-zpC"/>
+                    <navigationItem key="navigationItem" title="Library" largeTitleDisplayMode="always" id="Hxm-AY-zpC"/>
                     <connections>
                         <outlet property="tableView" destination="Z4V-iJ-5CF" id="wQb-UE-dH3"/>
                         <segue destination="AKP-L2-nLA" kind="show" identifier="CollectionDetailSegue" id="AHk-q0-Zr6"/>
@@ -198,13 +198,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0329cf1fa404f40b5159" translatesAutoresizingMaskIntoConstraints="NO" id="Jjy-kN-ig7">
-                                <rect key="frame" x="20" y="220" width="374" height="350"/>
+                                <rect key="frame" x="20" y="168" width="374" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="DOv-oq-Wa3"/>
                                 </constraints>
                             </imageView>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eve-b3-iLH">
-                                <rect key="frame" x="342" y="622" width="33" height="33"/>
+                                <rect key="frame" x="342" y="570" width="33" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="33" id="BGt-9R-gOk"/>
                                     <constraint firstAttribute="height" constant="33" id="WaN-TY-gIe"/>
@@ -219,7 +219,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="AkR-ry-o1s">
-                                <rect key="frame" x="39" y="600" width="336" height="92.5"/>
+                                <rect key="frame" x="39" y="548" width="336" height="92.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="GPw-T0-qhu">
                                         <rect key="frame" x="0.0" y="0.0" width="144" height="56.5"/>
@@ -253,10 +253,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C0L-tH-w4s">
-                                <rect key="frame" x="39" y="722.5" width="336" height="70.5"/>
+                                <rect key="frame" x="39" y="670.5" width="336" height="122.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUk-on-8Cr">
-                                        <rect key="frame" x="0.0" y="17" width="112" height="37"/>
+                                        <rect key="frame" x="0.0" y="43" width="112" height="37"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal">
@@ -268,7 +268,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVk-Fi-P0T">
-                                        <rect key="frame" x="112" y="17" width="112" height="37"/>
+                                        <rect key="frame" x="112" y="43" width="112" height="37"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal">
@@ -280,7 +280,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpP-Fd-8Z8">
-                                        <rect key="frame" x="224" y="17" width="112" height="37"/>
+                                        <rect key="frame" x="224" y="43" width="112" height="37"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="forward.end.fill" catalog="system">
@@ -331,7 +331,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RjY-cs-uti">
-                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumDetailViewCell" id="8Q3-HU-Emd" customClass="AlbumDetailViewCell" customModule="musicPlayer" customModuleProvider="target">
@@ -517,9 +517,9 @@
                             <constraint firstItem="RjY-cs-uti" firstAttribute="bottom" secondItem="CYO-ze-cLd" secondAttribute="bottom" id="gyT-Uu-FWy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Album" id="ujE-hN-UoL">
+                    <navigationItem key="navigationItem" title="Album" largeTitleDisplayMode="always" id="ujE-hN-UoL">
                         <barButtonItem key="rightBarButtonItem" title="Info" image="info.circle.fill" catalog="system" id="bb7-7b-Jtd">
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" systemColor="systemGreenColor"/>
                             <connections>
                                 <action selector="albumInfoButtonTapped:" destination="AKP-L2-nLA" id="Iwq-La-Oej"/>
                             </connections>
@@ -528,7 +528,7 @@
                     <connections>
                         <outlet property="tableView" destination="RjY-cs-uti" id="DRD-Wp-wrd"/>
                         <segue destination="s0r-rj-0BP" kind="show" identifier="PlayingFromAlbumSegue" id="S1r-nQ-2Ix"/>
-                        <segue destination="gkA-hb-c9c" kind="presentation" identifier="ShowAlbumInfo" id="psE-hw-2Rl"/>
+                        <segue destination="gkA-hb-c9c" kind="show" identifier="ShowAlbumInfo" id="psE-hw-2Rl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Se-yn-thV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -540,11 +540,11 @@
             <objects>
                 <viewController id="gkA-hb-c9c" customClass="AlbumInfoViewController" customModule="musicPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0zW-R1-jTV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vPt-UG-Aaw">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumInfoTableViewCell" id="d4u-Y7-P50" customClass="AlbumInfoTableViewCell" customModule="musicPlayer" customModuleProvider="target">
@@ -684,7 +684,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="About" id="wSK-bJ-URl">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="q5m-xS-Rga">
-                            <color key="tintColor" systemColor="labelColor"/>
+                            <color key="tintColor" systemColor="systemGreenColor"/>
+                            <connections>
+                                <action selector="DismissButton:" destination="gkA-hb-c9c" id="Kqb-36-upT"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -721,11 +724,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZEq-Mr-P8o" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Library" image="book.closed.fill" catalog="system" id="plc-4p-Shq"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gKK-Fg-IIh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gKK-Fg-IIh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -743,8 +746,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wcD-S7-Lbb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorites" image="heart.fill" catalog="system" id="brW-ft-h1G"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="lO3-AC-d5X">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lO3-AC-d5X">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -758,8 +761,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="S1r-nQ-2Ix"/>
+        <segue reference="1XK-rh-CTi"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" systemColor="labelColor"/>
     <resources>
         <image name="02CLnOe5IdSZKKS1oxWeRZ" width="640" height="640"/>
         <image name="0329cf1fa404f40b5159" width="300" height="300"/>

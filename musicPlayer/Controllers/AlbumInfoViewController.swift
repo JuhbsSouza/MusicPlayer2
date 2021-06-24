@@ -10,7 +10,9 @@ import UIKit
 class AlbumInfoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-
+    @IBAction func DismissButton(_ sender: UIBarButtonItem) {
+    }
+    
     var musicService = try! MusicService()
     var musicCollection: MusicCollection?
 
