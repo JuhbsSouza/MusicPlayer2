@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9F341038268257BC000AA9A4 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F341037268257BC000AA9A4 /* MusicTableViewCell.swift */; };
-		9F34103C26839D96000AA9A4 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34103B26839D96000AA9A4 /* MusicService.swift */; };
 		9F34103E2683AFBC000AA9A4 /* PlayingMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34103D2683AFBC000AA9A4 /* PlayingMusicView.swift */; };
 		9F55DB47267CA34100FB91C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F55DB46267CA34100FB91C5 /* AppDelegate.swift */; };
 		9F55DB49267CA34100FB91C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F55DB48267CA34100FB91C5 /* SceneDelegate.swift */; };
@@ -23,6 +22,8 @@
 		9FE91D3A267CB5AD006A939C /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE91D39267CB5AD006A939C /* FavoritesTableViewCell.swift */; };
 		9FE91D40267D21C9006A939C /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE91D3F267D21C9006A939C /* LibraryTableViewCell.swift */; };
 		9FE91D42267D2A2B006A939C /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE91D41267D2A2B006A939C /* LibraryViewController.swift */; };
+		FA6CF5BB2685E69500CAD20A /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CF5BA2685E69500CAD20A /* MusicService.swift */; };
+		FA6CF5BE2685F17800CAD20A /* FormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6CF5BD2685F17800CAD20A /* FormatterHelper.swift */; };
 		FA6EACA62683530A00EB70EF /* AlbumInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EACA52683530A00EB70EF /* AlbumInfoViewController.swift */; };
 		FA6EACA82683541800EB70EF /* AlbumInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EACA72683541800EB70EF /* AlbumInfoTableViewCell.swift */; };
 		FA6EACAA26837A4E00EB70EF /* AlbumArtistInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6EACA926837A4E00EB70EF /* AlbumArtistInfoTableViewCell.swift */; };
@@ -30,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		9F341037268257BC000AA9A4 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
-		9F34103B26839D96000AA9A4 /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicService.swift; path = "../../../../../Dropbox (DeveloperAcademy-BR)/Classes Content - 20:21/2021/Development/06-17 - UIKit Delegate + UITableView/Nano Resources/MusicService.swift"; sourceTree = "<group>"; };
 		9F34103D2683AFBC000AA9A4 /* PlayingMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingMusicView.swift; sourceTree = "<group>"; };
 		9F55DB43267CA34100FB91C5 /* musicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F55DB46267CA34100FB91C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		9FE91D39267CB5AD006A939C /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		9FE91D3F267D21C9006A939C /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
 		9FE91D41267D2A2B006A939C /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		FA6CF5BA2685E69500CAD20A /* MusicService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MusicService.swift; path = "../../../../../../Dropbox (DeveloperAcademy-BR)/Classes Content - 20:21/2021/Development/06-17 - UIKit Delegate + UITableView/Nano Resources/MusicService.swift"; sourceTree = "<group>"; };
+		FA6CF5BD2685F17800CAD20A /* FormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatterHelper.swift; sourceTree = "<group>"; };
 		FA6EACA52683530A00EB70EF /* AlbumInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoViewController.swift; sourceTree = "<group>"; };
 		FA6EACA72683541800EB70EF /* AlbumInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoTableViewCell.swift; sourceTree = "<group>"; };
 		FA6EACA926837A4E00EB70EF /* AlbumArtistInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumArtistInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				9FE91D3E267D081B006A939C /* AppDelegate */,
 				9FE91D3D267D07E7006A939C /* Controllers */,
+				FA6CF5BC2685F15E00CAD20A /* Helpers */,
 				9FE91D3B267D07D0006A939C /* Models */,
 				9FE91D36267CA4B5006A939C /* Resources */,
 				9FE91D3C267D07DB006A939C /* Views */,
@@ -104,7 +107,7 @@
 		9FE91D3B267D07D0006A939C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9F34103B26839D96000AA9A4 /* MusicService.swift */,
+				FA6CF5BA2685E69500CAD20A /* MusicService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -144,6 +147,14 @@
 				9F55DB48267CA34100FB91C5 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FA6CF5BC2685F15E00CAD20A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FA6CF5BD2685F17800CAD20A /* FormatterHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,11 +229,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6EACA62683530A00EB70EF /* AlbumInfoViewController.swift in Sources */,
+				FA6CF5BB2685E69500CAD20A /* MusicService.swift in Sources */,
 				9F5CAFF1268172FC00770F73 /* PlayingMusicViewController.swift in Sources */,
 				9F55DB4B267CA34100FB91C5 /* FavoritesViewController.swift in Sources */,
+				FA6CF5BE2685F17800CAD20A /* FormatterHelper.swift in Sources */,
 				9F55DB47267CA34100FB91C5 /* AppDelegate.swift in Sources */,
 				9FE91D40267D21C9006A939C /* LibraryTableViewCell.swift in Sources */,
-				9F34103C26839D96000AA9A4 /* MusicService.swift in Sources */,
 				9FE91D3A267CB5AD006A939C /* FavoritesTableViewCell.swift in Sources */,
 				FA6EACA82683541800EB70EF /* AlbumInfoTableViewCell.swift in Sources */,
 				9F5CAFEF2681675E00770F73 /* AlbumDetailViewCell.swift in Sources */,

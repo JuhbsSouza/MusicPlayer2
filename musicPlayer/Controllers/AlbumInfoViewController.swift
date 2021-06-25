@@ -10,7 +10,8 @@ import UIKit
 class AlbumInfoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBAction func DismissButton(_ sender: UIBarButtonItem) {
+    @IBAction func dismissButtonTapped(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     var musicService = try! MusicService()
@@ -25,7 +26,11 @@ class AlbumInfoViewController: UIViewController {
 
 extension AlbumInfoViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        if musicCollection!.albumArtistDescription != nil {
+            return 2
+        } else {
+            return 1
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

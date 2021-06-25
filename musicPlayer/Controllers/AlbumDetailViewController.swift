@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FavoriteActionDelegate: AnyObject {
+    func favoriteThisSong(music: Music, isFavorite: Bool)
+}
+
 class AlbumDetailViewController: UIViewController {
             
     @IBOutlet weak var tableView: UITableView!
@@ -25,7 +29,8 @@ class AlbumDetailViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowAlbumInfo" {
-            guard let viewController = segue.destination as? AlbumInfoViewController
+            guard let navigationController = segue.destination as? UINavigationController,
+                  let viewController = navigationController.topViewController as? AlbumInfoViewController
             else {
                 print(Error.self)
                 return
@@ -40,7 +45,6 @@ extension AlbumDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let numberOfMusics = musicCollection?.musics.count {
             let numberOfRows = numberOfMusics + 1
-            print(numberOfRows)
             return numberOfRows
         } else {
             return 0
@@ -62,9 +66,10 @@ extension AlbumDetailViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.albumCoverImage.image = musicService.getCoverImage(forItemIded: musicCollection!.id)
-            let currentMusic = indexPath.row - 1
-            cell.configure(music: musicCollection!.musics[currentMusic])
-            print(currentMusic)
+            let currentMusic = musicCollection!.musics[indexPath.row - 1]
+            let isFavorite = musicService.favoriteMusics.contains { $0.id == currentMusic.id }
+            cell.configure(music: currentMusic, isFavorite: isFavorite)
+            cell.delegate = self
 
             return cell
         }
@@ -74,5 +79,11 @@ extension AlbumDetailViewController: UITableViewDataSource {
 extension AlbumDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension AlbumDetailViewController: FavoriteActionDelegate {
+    func favoriteThisSong(music: Music, isFavorite: Bool) {
+        musicService.toggleFavorite(music: music, isFavorite: isFavorite)
     }
 }

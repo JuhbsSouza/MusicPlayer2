@@ -23,8 +23,20 @@ class AlbumInfoTableViewCell: UITableViewCell {
     }
 
     func configure(with album: MusicCollection) {
+        let numberOfMusics = String(album.musics.count) + " songs, "
+
+        var albumLength: Double = 0.0
+        for i in 0..<album.musics.count {
+            albumLength += album.musics[i].length
+        }
+        let albumLenghtFormatted = FormatterHelper.time(for: Int(albumLength))
+        
+        let releaseDate = FormatterHelper.date(date: album.referenceDate)
+
         albumTitleLabel.text = album.title
-        albumArtistLabel.text = album.mainPerson
+        albumArtistLabel.text = "Album by " + album.mainPerson
+        numberOfMusicsAndLengthLabel.text = numberOfMusics + albumLenghtFormatted
+        releaseDateLabel.text = "Released in " + releaseDate
         albumDescriptionLabel.text = album.albumDescription
     }
 }
