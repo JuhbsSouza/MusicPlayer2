@@ -25,10 +25,11 @@ class AlbumDetailViewCell: UITableViewCell {
         let albumTitle = item.title
         let artist = item.mainPerson
         let numberOfMusics = String(item.musics.count)
+        let releaseDate = FormatterHelper.date(date: item.referenceDate)
 
         albumTitleLabel.text = albumTitle
-        artistLabel.text = artist
-        numberOfMusicsTitleLabel.text = numberOfMusics
-        releaseDateLabel.text = "Okay"
+        artistLabel.text = "Album by " + artist
+        numberOfMusicsTitleLabel.text = numberOfMusics + " songs"
+        releaseDateLabel.text = "Released " + releaseDate
     }
 }

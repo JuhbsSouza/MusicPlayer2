@@ -25,7 +25,8 @@ class AlbumDetailViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowAlbumInfo" {
-            guard let viewController = segue.destination as? AlbumInfoViewController
+            guard let navigationController = segue.destination as? UINavigationController,
+                  let viewController = navigationController.topViewController as? AlbumInfoViewController
             else {
                 print(Error.self)
                 return
@@ -40,7 +41,6 @@ extension AlbumDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let numberOfMusics = musicCollection?.musics.count {
             let numberOfRows = numberOfMusics + 1
-            print(numberOfRows)
             return numberOfRows
         } else {
             return 0
@@ -64,7 +64,6 @@ extension AlbumDetailViewController: UITableViewDataSource {
             cell.albumCoverImage.image = musicService.getCoverImage(forItemIded: musicCollection!.id)
             let currentMusic = indexPath.row - 1
             cell.configure(music: musicCollection!.musics[currentMusic])
-            print(currentMusic)
 
             return cell
         }
