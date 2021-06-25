@@ -23,9 +23,19 @@ class LibraryTableViewCell: UITableViewCell {
 
     public func configure(item: MusicCollection) {
         let title = item.title
+
+        let collectionType = item.type
+        var type = ""
+        switch collectionType {
+        case .playlist:
+            type = "Playlist"
+        case .album:
+            type = "Album"
+        }
+
         let artist = item.mainPerson
 
         albumTitleLabel.text = title
-        descriptionLabel.text = artist
+        descriptionLabel.text = type + " • " + artist
     }
 }
