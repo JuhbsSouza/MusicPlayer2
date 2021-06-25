@@ -12,6 +12,8 @@ class FavoritesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var musicService = try! MusicService()
+    var musicCollection: MusicCollection?
+    var music: Music?
 
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()

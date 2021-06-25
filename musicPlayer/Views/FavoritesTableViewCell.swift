@@ -26,6 +26,7 @@ class FavoritesTableViewCell: UITableViewCell {
     }
     
     public func configure(item: Music) {
+        albumImage.image = musicService.getCoverImage(forItemIded: item.id)
         musicTitleLabel.text = item.title
         artistNameLabel.text = item.artist
         self.music = item
