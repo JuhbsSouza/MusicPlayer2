@@ -453,6 +453,9 @@
                                                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="favoriteButtonTapped:" destination="Fwo-gr-fpZ" eventType="touchUpInside" id="oTE-TU-is4"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -467,6 +470,7 @@
                                         <connections>
                                             <outlet property="albumCoverImage" destination="nSp-ck-T79" id="g1V-cp-Em7"/>
                                             <outlet property="artistLabel" destination="3fF-Pc-KcK" id="CTJ-Uo-I5c"/>
+                                            <outlet property="favoriteButton" destination="9zg-O1-E4q" id="uNz-9s-DAk"/>
                                             <outlet property="musicTitleLabel" destination="kk0-81-wEW" id="Uxa-2x-Xno"/>
                                         </connections>
                                     </tableViewCell>

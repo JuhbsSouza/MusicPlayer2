@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FavoriteActionDelegate: AnyObject {
+    func favoriteThisSong(music: Music, isFavorite: Bool)
+}
+
 class AlbumDetailViewController: UIViewController {
             
     @IBOutlet weak var tableView: UITableView!
@@ -62,8 +66,10 @@ extension AlbumDetailViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.albumCoverImage.image = musicService.getCoverImage(forItemIded: musicCollection!.id)
-            let currentMusic = indexPath.row - 1
-            cell.configure(music: musicCollection!.musics[currentMusic])
+            let currentMusic = musicCollection!.musics[indexPath.row - 1]
+            let isFavorite = musicService.favoriteMusics.contains { $0.id == currentMusic.id }
+            cell.configure(music: currentMusic, isFavorite: isFavorite)
+            cell.delegate = self
 
             return cell
         }
@@ -73,5 +79,11 @@ extension AlbumDetailViewController: UITableViewDataSource {
 extension AlbumDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension AlbumDetailViewController: FavoriteActionDelegate {
+    func favoriteThisSong(music: Music, isFavorite: Bool) {
+        musicService.toggleFavorite(music: music, isFavorite: isFavorite)
     }
 }

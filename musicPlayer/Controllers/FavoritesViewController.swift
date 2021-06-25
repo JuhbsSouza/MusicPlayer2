@@ -12,7 +12,11 @@ class FavoritesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var musicService = try! MusicService()
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
